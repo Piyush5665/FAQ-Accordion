@@ -1,7 +1,6 @@
 const acc = document.querySelectorAll(".accordion");
 
 
-
 acc.forEach((element) => {
   const open_icon = element.querySelector(".plus_icon");
   const close_icon = element.querySelector(".cross_icon");
