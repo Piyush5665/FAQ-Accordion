@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thapa Accordian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="accordion">
+            <p class="index">01</p>
+            <h2>How do I Toggle an Accordion using JavaScript?</h2>
+            <ion-icon class="plus_icon icon" name="add-outline"></ion-icon>
+            <ion-icon class="cross_icon icon" name="close-outline"></ion-icon>
+                <p class="answer">You can use JavaScript to toggle an accordion by adding and removing a CSS class to the accordion element when it is clicked. This class should have styles that expand or collapse the accordion content.</p>
+
+
+        </div>
+        <div class="accordion">
+            <p class="index">02</p>
+            <h2>How do I make sure only one Accordion is open at a time?</h2>
+            <ion-icon class="plus_icon icon" name="add-outline"></ion-icon>
+            <ion-icon class="cross_icon icon" name="close-outline"></ion-icon>
+            <p class="answer">You can add an event listener to each accordion that closes all the other accordions when one is opened. This can be done by checking if the clicked accordion is active, and if so, removing the active class from all the other accordions.</p>
+
+
+        </div>
+        <div class="accordion">
+            <p class="index">03</p>
+            <h2>How do I style the active Accordion?</h2>
+            <ion-icon class="plus_icon icon" name="add-outline"></ion-icon>
+            <ion-icon class="cross_icon icon" name="close-outline"></ion-icon>
+            <p class="answer">You can style the active accordion by adding an active class to it using JavaScript, and then defining styles for that class in your CSS. For example, you could change the background color or add a border to the active accordion.</p>
+
+
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

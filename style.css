@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Libre+Baskerville&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #24305f;
+}
+
+
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #fffdfb;
+
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    /* border: 2px solid black; */
+    padding: 20px;
+
+}
+
+.accordion {
+
+    padding: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 30px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    align-items: center;
+}
+
+.accordion h2 {
+    font-size: 1.5rem;
+    /* text-transform: capitalize; */
+}
+
+.accordion .answer {
+    grid-column: 2/3;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 20px;
+    /* letter-spacing: 0.5px; */
+    word-spacing: 1.8px;
+    display: none;
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    border-top: 3px solid #1864ab;
+    animation: borderline 1.5s linear forwards;
+}
+
+.accordion .index {
+    font-size: 2rem;
+}
+
+@keyframes borderline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: #1864ab;
+    transition: transform ease 0.4s;
+}
+
+
+
+.active .icon {
+    transform: rotate(45deg);
+}
+
+.cross_icon {
+    display: none;
+}
+
+
+.active .answer {
+    display: block;
+    animation: fade 0.6s ease-in-out;
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
